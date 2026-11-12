@@ -1,0 +1,6 @@
+{
+  "name": "Excel-to-MindMap Hybrid Canvas Utility",
+  "description": "An interactive utility featuring an Excel-like grid synced bidirectionally with an infinite MindMap canvas, keyboard shortcuts, preloaded templates, and multiple premium color themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@keyframes searchGlowPulse {
+  0% {
+    box-shadow: 0 0 8px #FFD700, 0 0 2px #FFD700;
+  }
+  50% {
+    box-shadow: 0 0 22px #FFD700, 0 0 12px #FFD700, 0 0 5px #FFD700;
+  }
+  100% {
+    box-shadow: 0 0 8px #FFD700, 0 0 2px #FFD700;
+  }
+}
+
+.search-glow-pulse {
+  animation: searchGlowPulse 1.6s infinite ease-in-out;
+  border-color: #FFD700 !important;
+  border-width: 2.5px !important;
+  z-index: 50 !important;
+}
+
+@keyframes selectedGlowPulse {
+  0% {
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4), 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.85), 0 0 12px rgba(59, 130, 246, 0.5), inset 0 0 4px rgba(59, 130, 246, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4), 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+}
+
+.selected-node-glow {
+  animation: selectedGlowPulse 2s infinite ease-in-out;
+}
+
+@keyframes overduePulse {
+  0% {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+  50% {
+    border-color: rgba(239, 68, 68, 1);
+    box-shadow: 0 0 18px 4px rgba(255, 0, 0, 0.6);
+  }
+  100% {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.overdue-high-pulse {
+  animation: overduePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  border-color: #ef4444 !important;
+}
+
+.overdue-pulse {
+  animation: overduePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+}
+
+.node-locked {
+  opacity: 0.7 !important;
+  filter: grayscale(0.5) !important;
+  transition: all 0.3s ease;
+}
+
+@property --progress-deg {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --progress-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #00ffff;
+}
+
+
